@@ -1,0 +1,11 @@
+<div class="section">
+    <h3>{{headingTitle}}</h3>
+    <div>
+    	<ul>
+            <li> Currency Pair Customer Name Base Currency Amount </li>
+        </ul>
+        <ul type="square" ng-repeat="displayTransaction in displayTransactions">
+            <li> {{displayTransaction.currencyPair}},{{displayTransaction.customerName}},{{displayTransaction.baseCurrency}} ,{{displayTransaction.amount}}</li>
+        </ul>
+    </div>
+</div>

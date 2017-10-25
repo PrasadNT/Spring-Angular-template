@@ -1,0 +1,24 @@
+ <div class="section">
+    <h3>{{headingTitle}}</h3>
+    <div ng-submit="submit()" ng-controller="submitTransactionController">
+    <form><table><tr>
+    <td align="right">Currency Pair: </td><td><input type="text" ng-model="transaction.currencyPair" required/></td></tr>
+    <tr><td align="right">Customer Name: </td><td><input type="text" ng-model="transaction.customerName" required/></td></tr>
+    <tr><td align="right">Base Currency: </td><td><input type="text" ng-model="transaction.baseCurrency" required/></td></tr>
+    <tr><td align="right">Amount: </td><td><input type="number" ng-model="transaction.amount" required/></td></tr>
+    <tr colspan=2><td align="center"><input type="submit" id="submit" value="Submit" /></td></tr>
+  </form>
+   
+   <div>
+   <table>
+        <ul type="square" ng-repeat="transaction in transactions">
+        	<h5 style="color:green;text-align:right"> Transaction Saved Successfully</h5>
+            Currency Pair :{{transaction.currencyPair}} <br/> 
+            Customer Name :{{transaction.customerName}} <br/>
+            Base Currency :{{transaction.baseCurrency}} <br/>
+            Ammount       :{{transaction.amount}}
+        </ul>
+      </table>  
+    </div>
+    </div>
+</div>
